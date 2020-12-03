@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0 !important;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: BERNIERDistressed;
+  src: url(./BERNIERDistressed-Regular.otf);
+}
+@font-face {
+  font-family: BERNIERRegular;
+  src: url(./BERNIERRegular-Regular.otf);
+}
+@font-face {
+  font-family: BERNIERShade;
+  src: url(./BERNIERShade-Regular.otf);
+}
+body {
+  background-image: url(../images/BBQ-BG.jpg);
+  font-family: BERNIERDistressed;
+  outline: 0 !important;
+  font-size: 18px;
+  font-weight: 400;
+}
+div.container {
+  display: flex;
+  flex-direction: column;
+}
+div.topo {
+  width: 100vw;
+}
+div.title-event {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1%;
+}
+div.title-event h2 {
+  font-size: xxx-large;
+  color: #cb382c;
+}
+div.title-event h3 {
+  font-size: xxx-large;
+  font-family: BERNIERRegular;
+  color: #252525;
+}
+ul.listUsers {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+li.avatar {
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+li.avatar img {
+  max-width: 125px;
+  border-radius: 50%;
+  border: 1px solid #252525;
+  background-color: #cb382c;
+}
+div.formConfirma {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+}
+div.formConfirma span {
+  font-size: x-large;
+}
+div.formConfirma input {
+  height: 50px;
+  width: 350px;
+  padding: 10px;
+  margin-top: 5px;
+  border: 2px solid #252525;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: x-large;
+  font-family: BERNIERRegular;
+}
+div.formConfirma button {
+  height: 50px;
+  width: 350px;
+  padding: 5px 20px;
+  border: 0px solid #252525;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: x-large;
+  font-family: BERNIERRegular;
+  background-color: #252525;
+  color: white;
+  cursor: pointer;
+  margin-top: 3px;
+}
+div.formConfirma button:hover {
+  background-color: #003459;
+  transition-delay: 10ms;
+}
+div.divConfirma {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
