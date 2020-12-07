@@ -22,13 +22,19 @@ body {
   outline: 0 !important;
   font-size: 18px;
   font-weight: 400;
+  max-width: 100vw;
 }
 div.container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 div.topo {
   width: 100%;
+}
+div.topo img {
+  max-width: 100%;
 }
 div.title-event {
   width: 100%;
@@ -54,6 +60,12 @@ ul.listUsers {
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  animation-delay: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
 }
 li.avatar {
   margin: 0 10px;
@@ -137,37 +149,52 @@ div.divConfirma {
   justify-content: center;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* MEDIA SCREEN */
 @media (max-width: 576px) {
-  .grow-content {
+  body {
+    font-size: 22pt;
+  }
+  div.title-event {
+  }
+  div.title-event h2 {
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    font-size: 22pt;
+  }
+  div.title-event h3 {
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    font-size: 22pt;
+  }
+  ul.listUsers {
     max-width: 100%;
-    margin: 2vh;
-    text-align: center;
   }
-  .grow-content-icon {
-    display: none;
+  li.avatar {
+    margin: 0;
+    max-width: 20%;
   }
-  .order-1 {
-    order: 1;
+  li.avatar img {
+    max-width: 70%;
   }
-  .order-2 {
-    order: 3 !important;
+  li.avatar button {
+    font-size: 8pt;
   }
-  .order-3 {
-    order: 2;
+  h2 {
+    font-size: 22pt;
   }
-}
-@media (min-width: 768px) and (max-width: 991.98) {
-  .grow-content {
-    text-align: center;
-  }
-  .grow-image {
-    display: none;
-  }
-}
-@media (min-width: 769px) and (max-width: 1199.98px) {
-  .grow-content-icon {
-    font-size: 1vw;
+  h3 {
+    font-size: 22pt;
   }
 }
 

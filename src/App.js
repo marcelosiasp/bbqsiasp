@@ -125,7 +125,6 @@ function App() {
       try {
         const list = await api.get("/bbq");
         setUsers(list.data);
-        console.log(list.data);
       } catch {
         console.error();
       }
@@ -140,7 +139,6 @@ function App() {
     try {
       const res = await api.put(`/bbq/${user._id}`, data);
       setConfirma(true);
-      //alert("Realizado com sucesso.");
     } catch {
       alert("Algo deu errado!");
     }
@@ -178,7 +176,7 @@ function App() {
   }
 
   if (step === true && confirma === true) {
-    var delay = 500; //1 seconds
+    var delay = 500;
     setTimeout(function () {
       {
         animacao();
@@ -516,7 +514,9 @@ function App() {
   } else {
     return (
       <>
-        <img src={bannerTop} alt="BBQ" />
+        <div className="topo">
+          <img src={bannerTop} alt="BBQ" />
+        </div>
         <div className="container">
           <div className="title-event">
             <h2 className="title">
