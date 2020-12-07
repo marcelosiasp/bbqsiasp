@@ -28,7 +28,7 @@ div.container {
   flex-direction: column;
 }
 div.topo {
-  width: 100vw;
+  width: 100%;
 }
 div.title-event {
   width: 100%;
@@ -63,11 +63,23 @@ li.avatar {
   flex-direction: column;
   cursor: pointer;
 }
+li.avatar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: BERNIERDistressed;
+  outline: 0 !important;
+  font-size: 18px;
+  font-weight: 400;
+}
 li.avatar img {
   max-width: 125px;
   border-radius: 50%;
   border: 1px solid #252525;
   background-color: #cb382c;
+}
+li.avatar img :hover {
+  filter: none;
 }
 div.formConfirma {
   display: flex;
@@ -105,12 +117,63 @@ div.formConfirma button {
   margin-top: 3px;
 }
 div.formConfirma button:hover {
-  background-color: #003459;
+  background-color: #cb382c;
   transition-delay: 10ms;
+}
+div.formConfirma button.backLeft {
+  background: none;
+  border: none;
+  color: #000;
+}
+div.formConfirma button.backLeft img {
+  width: 18px;
+  margin-top: 15px;
+  margin-right: 5px;
 }
 div.divConfirma {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+/* MEDIA SCREEN */
+@media (max-width: 576px) {
+  .grow-content {
+    max-width: 100%;
+    margin: 2vh;
+    text-align: center;
+  }
+  .grow-content-icon {
+    display: none;
+  }
+  .order-1 {
+    order: 1;
+  }
+  .order-2 {
+    order: 3 !important;
+  }
+  .order-3 {
+    order: 2;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98) {
+  .grow-content {
+    text-align: center;
+  }
+  .grow-image {
+    display: none;
+  }
+}
+@media (min-width: 769px) and (max-width: 1199.98px) {
+  .grow-content-icon {
+    font-size: 1vw;
+  }
+}
+
+#canvas {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
 }
