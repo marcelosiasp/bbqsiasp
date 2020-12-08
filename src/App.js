@@ -193,7 +193,7 @@ function App() {
               <h2 className="title">
                 Top {!user.username ? "" : separe(user.username)}!
               </h2>
-              <h3>presença confimada, vai ser pressão...</h3>
+              <h3>presença confirmada, vai ser pressão...</h3>
             </div>
           </div>
         </div>
